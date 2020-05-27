@@ -1,0 +1,230 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 27, 2020 at 03:54 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.3.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ise`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `5pdf`
+--
+
+CREATE TABLE `5pdf` (
+  `module1` varchar(500) DEFAULT NULL,
+  `module2` varchar(500) DEFAULT NULL,
+  `module3` varchar(500) DEFAULT NULL,
+  `module4` varchar(500) DEFAULT NULL,
+  `module5` varchar(500) DEFAULT NULL,
+  `ass1` varchar(500) DEFAULT NULL,
+  `ass2` varchar(500) DEFAULT NULL,
+  `ass3` varchar(500) DEFAULT NULL,
+  `subject` varchar(50) NOT NULL,
+  `tname` varchar(100) NOT NULL,
+  `no` int(225) NOT NULL,
+  `date` varchar(5) DEFAULT NULL,
+  `section` varchar(50) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `5pdf`
+--
+
+INSERT INTO `5pdf` (`module1`, `module2`, `module3`, `module4`, `module5`, `ass1`, `ass2`, `ass3`, `subject`, `tname`, `no`, `date`, `section`) VALUES
+('Upload/8497se.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ise58', '1234568', 5253, '2019', NULL),
+('Upload/9659se.pdf', 'Upload/9265Xobin.pdf', NULL, NULL, NULL, NULL, NULL, NULL, 'ise51', '1258963', 5254, '2019', 'A'),
+('Upload/9039se.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'A', '1258963', 5255, '2019', NULL),
+('Upload/2002dd.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'A', '1258963', 5256, '2019', ''),
+('Upload/4193se.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'A', '1258963', 5257, '2019', ''),
+('Upload/3543se.pdf', 'Upload/9265Xobin.pdf', NULL, NULL, NULL, NULL, NULL, NULL, 'ise51', '1258963', 5260, '2019', 'B'),
+('Upload/5598se.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ise89', '1258963', 5259, '2019', 'A'),
+('Upload/7046VishnuVardhan_InternshalaResume.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ise89', '1234568', 5261, '2020', ''),
+('Upload/1810VishnuVardhan_InternshalaResume.pdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'ise89', '1234568', 5262, '2020', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `salogin`
+--
+
+CREATE TABLE `salogin` (
+  `salno` varchar(7) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `salogin`
+--
+
+INSERT INTO `salogin` (`salno`, `username`, `password`) VALUES
+('1', 'vardhan', '202cb962ac59075b964b07152d234b70');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE `student` (
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `usn` varchar(10) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `dob` varchar(10) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `sem` int(2) DEFAULT NULL,
+  `section` varchar(2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`name`, `email`, `usn`, `phone`, `dob`, `password`, `sem`, `section`) VALUES
+('rajeslh', 'memsk@gmail.com', '1nh17ib045', '9876503217', '2019-09-05', '202cb962ac59075b964b07152d234b70', 0, 'a'),
+('rajesh', 'mems@gmail.com', '1nh17ic045', '9876573217', '2019-09-05', '202cb962ac59075b964b07152d234b70', 0, 'a'),
+('vikas', 'vikasm@gmail.com', '1nh18is145', '7760785754', '2019-09-13', '202cb962ac59075b964b07152d234b70', 0, 'a'),
+('manvitha', 'manvitha1203@gmail.com', '1nh17is045', '9876543310', '2003-12-02', '202cb962ac59075b964b07152d234b70', 5, 'a'),
+('manvitha', 'manvitha12@gmail.com', '1nh17is149', '9876543311', '2003-12-02', '202cb962ac59075b964b07152d234b70', 5, 'a'),
+('rajesh', 'rajeshpalagiri104@gmail.com', '1nh17is121', '9000875878', '2003-12-14', '202cb962ac59075b964b07152d234b70', 5, 'b'),
+('sudeppp', 'sudeep99poojary@gmail.com', '1nh17is109', '7760485754', '2003-12-14', 'f25a2fc72690b780b2a14e140ef6a9e0', 5, 'b'),
+('kkkGG', 'kavithagowda@GMAIL.COM', '1nh17is129', '9900223344', '2003-12-24', '202cb962ac59075b964b07152d234b70', 5, 'A'),
+('krishna', 'krishna177@gmail.com', '1nh17ec063', '8247555428', '2003-12-05', '202cb962ac59075b964b07152d234b70', 5, 'b'),
+('vikas', 'rajeshpalagiri10d4@gmail.com', '1nh17is412', '7760485750', '2019-07-30', '202cb962ac59075b964b07152d234b70', 5, 'A'),
+('me', 'harika1@gmail.com', '1nh17is046', '9876543314', '2019-08-05', '202cb962ac59075b964b07152d234b70', 5, 'a'),
+('me', 'me@gmail.com', '1nl17is045', '9886543210', '2019-08-06', '202cb962ac59075b964b07152d234b70', 5, 'b'),
+('suhasan', 'pvssuhasan.reddy@gmail.com', '123456', '8971752756', '1983-03-12', '4f97e829e761893015ad3d1f99aa8b4b', 5, 'a'),
+('rinku', 'rinku@gmail.com', '1nh18is045', '9876543315', '2019-08-07', '202cb962ac59075b964b07152d234b70', 3, 'a'),
+('rajeshl', 'mem@gmail.com', '1np17is121', '9976543210', '2019-09-04', '202cb962ac59075b964b07152d234b70', 5, 'A'),
+('subbu', 'info@saveglobe.in', '1nh17is999', '9740766334', '1999-08-12', '202cb962ac59075b964b07152d234b70', 0, 'A'),
+('hasu', 'info1@saveglobe.in', '1nh18is064', '9740766335', '2001-03-12', '202cb962ac59075b964b07152d234b70', 0, 'A'),
+('vishnu', '2527webmaster@gmail.com', '1nh17is064', '9866531011', '2020-05-07', '202cb962ac59075b964b07152d234b70', 0, 'a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subject`
+--
+
+CREATE TABLE `subject` (
+  `subjectno` varchar(50) NOT NULL,
+  `subjectname` varchar(100) NOT NULL,
+  `sem` varchar(50) NOT NULL,
+  `branch` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subject`
+--
+
+INSERT INTO `subject` (`subjectno`, `subjectname`, `sem`, `branch`) VALUES
+('ise51', 'softwareeng', '5', 'ise'),
+('ise52', 'dbms', '5', 'ise'),
+('ise53', 'os', '5', 'ise'),
+('ise54', 'daa', '5', 'ise'),
+('ise551', 'flat', '5', 'ise'),
+('ise566', 'data science', '3', 'ise'),
+('ise564', 'cloudcomputing', '5', 'ise'),
+('ise58', 'php', '3', 'ise'),
+('ise89', 'c++', '3', 'ise');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacherdetails`
+--
+
+CREATE TABLE `teacherdetails` (
+  `tid` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `qualification` varchar(50) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `dob` varchar(10) NOT NULL,
+  `sub1` varchar(50) NOT NULL,
+  `sub1section` varchar(50) DEFAULT NULL,
+  `sub2` varchar(50) NOT NULL,
+  `sub2section` varchar(50) DEFAULT NULL,
+  `psw` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teacherdetails`
+--
+
+INSERT INTO `teacherdetails` (`tid`, `name`, `email`, `qualification`, `phone`, `dob`, `sub1`, `sub1section`, `sub2`, `sub2section`, `psw`) VALUES
+('123456', 'subbu', 'info@saveglobe.in', 'm', '9740766334', '1983-03-12', 'ise51', NULL, 'ise52', NULL, '202cb962ac59075b964b07152d234b70'),
+('45678', 'nihas', 'nihas@nihas.com', 'mba', '7894581235', '1987-03-12', 'ise54', NULL, 'ise566', NULL, '202cb962ac59075b964b07152d234b70'),
+('5648', 'vihas', 'vihas@vihas.com', 'mba', '7487894564', '1986-03-12', 'ise58', NULL, 'ise564', NULL, '202cb962ac59075b964b07152d234b70'),
+('1234568', 'rrr', 'rrr@gmail.com', 'mba', '2354567894', '1925-03-12', 'ise89', NULL, 'ise58', NULL, '202cb962ac59075b964b07152d234b70'),
+('1258963', 'saaho', 'saaho@saaho.com', 'kjl', '8974562586', '1986-03-12', 'ise51', 'A', 'ise89', 'C', '202cb962ac59075b964b07152d234b70');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `5pdf`
+--
+ALTER TABLE `5pdf`
+  ADD PRIMARY KEY (`no`);
+
+--
+-- Indexes for table `salogin`
+--
+ALTER TABLE `salogin`
+  ADD PRIMARY KEY (`salno`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`usn`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `phone` (`phone`);
+
+--
+-- Indexes for table `subject`
+--
+ALTER TABLE `subject`
+  ADD PRIMARY KEY (`subjectno`);
+
+--
+-- Indexes for table `teacherdetails`
+--
+ALTER TABLE `teacherdetails`
+  ADD PRIMARY KEY (`tid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `5pdf`
+--
+ALTER TABLE `5pdf`
+  MODIFY `no` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5263;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
